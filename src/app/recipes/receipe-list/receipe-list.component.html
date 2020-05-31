@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-xs-12">
+        <!-- USING ROUTERLINK 
+            <button class="btn btn-success"
+        [routerLink]="['new']">New Recipe</button> -->
+        <button class="btn btn-success"
+        (click)="onNewRecipe()">New Recipe</button>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-xs-12">
+        <!-- sending recipe obj down to recipe-item by property binding -->
+        <app-receipe-item 
+            *ngFor="let r of recipes; let i = index"
+            [recipe]="r"
+            [index] = "i"
+           >
+        </app-receipe-item>
+    </div>
+</div>
