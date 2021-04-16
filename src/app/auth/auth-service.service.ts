@@ -50,7 +50,7 @@ export class AuthServiceService {
   }
   login(userEmail: string, userPassword: string) {
     return this.http.post<AuthResponseData>('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key='
-     + environment.firebaseAPIKey,
+      + environment.firebaseAPIKey,
       {
         // below properties are same as api given by firebase request property
         email: userEmail,
